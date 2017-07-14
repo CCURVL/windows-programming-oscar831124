@@ -17,6 +17,23 @@ using namespace std;
 int getAscendingStr(string& inputStr)
 {
 
+	
+
+	}
+
+// solveQ Function requirement
+// 
+// solve quadratic function ax^2 + bx + c = 0
+//
+// return 1 if equation has two different real number root 
+//          (return vector size should be 2 containing 2 solution.  
+//          Greater value should put into smaller vector index)
+//        0 there is only one possible solution to the quadratic equation 
+//          (return vector size should be 1)
+//       -1 complex roots 
+//          (return vector size should be 0)
+int solveQ(vector<double> &x, double a, double b, double c)
+{
 	if (b*b - (4*a*c) > 0) {
 		double x1 = -1 * b + sqrt(b*b - (4 * a*c)) / (a + a);
 		double x2 = -1 * b - sqrt(b*b - (4 * a*c)) / (a + a);
@@ -34,24 +51,7 @@ int getAscendingStr(string& inputStr)
 	else {
 		return -1;
 	}
-
-	}
-
-// solveQ Function requirement
-// 
-// solve quadratic function ax^2 + bx + c = 0
-//
-// return 1 if equation has two different real number root 
-//          (return vector size should be 2 containing 2 solution.  
-//          Greater value should put into smaller vector index)
-//        0 there is only one possible solution to the quadratic equation 
-//          (return vector size should be 1)
-//       -1 complex roots 
-//          (return vector size should be 0)
-int solveQ(vector<double> &x, double a, double b, double c)
-{
-
-	return 0;
+	
 }
 
 int main(int argc, char*argv[]) {
