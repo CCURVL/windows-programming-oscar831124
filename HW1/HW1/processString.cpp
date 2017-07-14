@@ -16,12 +16,26 @@ using namespace std;
 //       -1 if exception occur (ex. string containing non-digit character)
 int getAscendingStr(string& inputStr)
 {
-	
-	/// Please fill your code here
 
+	if (b*b - (4*a*c) > 0) {
+		double x1 = -1 * b + sqrt(b*b - (4 * a*c)) / (a + a);
+		double x2 = -1 * b - sqrt(b*b - (4 * a*c)) / (a + a);
+		x.push_back(x1);
+		x.push_back(x2);
 
-	return 0;
-}
+		return 1;
+	}
+	else if (b*b - (4 * a*c) == 0) {
+		double x3 = -1 * b + sqrt(b*b - (4 * a*c)) / (a + a);
+		x.push_back(x3);
+
+		return 0;
+	}
+	else {
+		return -1;
+	}
+
+	}
 
 // solveQ Function requirement
 // 
