@@ -14,12 +14,29 @@ using namespace std;
 //
 // return 0 if success, (empty string)
 //       -1 if exception occur (ex. string containing non-digit character)
-int getAscendingStr(string& inputStr)
-{
-
-	
-
+int getAscendingStr(string& inputStr){
+	string out = inputStr;
+	stringstream ss(out);
+	string sub_str;
+	int ans[100];
+	int c = 0;
+	int d;
+	int t;
+	int n;
+	while (getline(ss, sub_str, ' ')) {
+		cout << sub_str+" ";
+		ans[c] = atoi(sub_str.c_str());
+		c++;
 	}
+	cout << endl;
+	sort(ans, ans + c);
+	for (n = 0; n < c; n++) {
+		printf("%d ", ans[n]);
+	}
+	printf("\n");
+	return 0;
+	
+}
 
 // solveQ Function requirement
 // 
