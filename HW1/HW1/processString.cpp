@@ -16,6 +16,12 @@ using namespace std;
 //       -1 if exception occur (ex. string containing non-digit character)
 int getAscendingStr(string& inputStr){
 	string out = inputStr;
+	int q = 0;
+	for (q = 0; q < inputStr.length(); q++){
+		if (!(isdigit(inputStr[q]) || inputStr[q] == ' ' || inputStr[q]== '-')) {
+			return -1;
+		}
+	}
 	stringstream ss(out);
 	string sub_str;
 	int ans[100];
