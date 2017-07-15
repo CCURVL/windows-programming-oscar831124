@@ -26,8 +26,6 @@ int getAscendingStr(string& inputStr){
 	string sub_str;
 	int ans[100];
 	int c = 0;
-	int d;
-	int t;
 	int n;
 	while (getline(ss, sub_str, ' ')) {
 		cout << sub_str+" ";
