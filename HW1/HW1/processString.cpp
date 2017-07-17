@@ -24,20 +24,24 @@ int getAscendingStr(string& inputStr){
 	}
 	stringstream ss(out);
 	string sub_str;
-	int ans[100];
+	//int ans[100];
+	vector<int> vans;
 	int c = 0;
 	int n;
 	while (getline(ss, sub_str, ' ')) {
 		cout << sub_str+" ";
-		ans[c] = atoi(sub_str.c_str());
+		//ans[c] = atoi(sub_str.c_str());
+		vans.push_back(atoi(sub_str.c_str()));
 		c++;
 	}
 	cout << endl;
-	sort(ans, ans + c);
+	//sort(ans, ans + c);
+	sort(vans.begin(), vans.end());
 	for (n = 0; n < c; n++) {
-		printf("%d ", ans[n]);
+		//printf("%d ", ans[n]);
+		cout<<(vans[n])<<" ";
 	}
-	printf("\n");
+	cout << endl;
 	return 0;
 	
 }
